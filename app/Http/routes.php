@@ -54,6 +54,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin','middleware' => 'auth']
     Route::resource('category','CategoryController');
 
     Route::get('tags/destroy/{id}/','TagController@destroy');
+	Route::get('tags/ceshi','TagController@ceshi');
     Route::resource('tags','TagController');
 
 
