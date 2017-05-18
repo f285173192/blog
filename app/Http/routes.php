@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    echo "苦心人天不负，有志者事竟成";
+});
+Route::get('/borther', function () {
+    echo "我最好的朋友";
 });
