@@ -36,6 +36,18 @@ Route::controllers([
 /*-- ----------------------------
   ---- 后台管理
   -- ----------------------------*/
+Route::get('/session',function(){
+	$uid=session(['uid'=>10]);
+  print_r($_SESSION);//问老弟
+});
+Route::get('/login',function(){
+  
+  echo "请登录";
+});
+Route::get('/setting',function(){
+  
+  echo "进入设置页面";
+})->middleware('login');
 
 Route::group(['prefix' => 'admin','namespace' => 'Admin','middleware' => 'auth'],function()
 {
